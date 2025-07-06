@@ -23,7 +23,7 @@ def show_shift_info(update, context, is_query=False):
     previous_day = (now - timedelta(days=1)).day
 
     try:
-        with open("engineers.json", encoding="utf-8") as f:
+        with open("july_engineers_schedule.json", encoding="utf-8") as f:
             data = json.load(f)
             eng_data = data["Инженеры"]
             update_time = data["Время последнего обновления"]

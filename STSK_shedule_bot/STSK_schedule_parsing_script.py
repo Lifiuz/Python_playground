@@ -10,7 +10,12 @@ print("-"*50)
 print("Открываем kb...")
 
 driver = webdriver.Chrome()
-driver.get('https://kb.ertelecom.ru/pages/viewpage.action?pageId=1027971596')
+try:
+    driver.get('https://kb.ertelecom.ru/pages/viewpage.action?pageId=1027971596')
+except:
+    print("Не удалось открыть kb, возможно нет доступа или VPN выключен")
+    driver.quit()
+    exit()
 
 # Функция для загрузки учетных данных из JSON
 def load_credentials():
@@ -123,7 +128,7 @@ with open ('debugging.txt', 'w', encoding='utf-8') as debuggingTXT:
                 engineers_schedule.append("?")
 
 # Записываем все данные в JSON файл один раз после завершения цикла
-with open('engineers.json', 'w', encoding='utf-8') as engineersJSON:
+with open('july_engineers_schedule.json', 'w', encoding='utf-8') as engineersJSON:
     # Создаем основной объект, который будет содержать дату и данные
     output_data = {
         "Время последнего обновления": current_date,
@@ -131,5 +136,7 @@ with open('engineers.json', 'w', encoding='utf-8') as engineersJSON:
     }
     # Записываем весь объект в файл
     json.dump(output_data, engineersJSON, ensure_ascii=False)
+print("Работа скрипта завершена")
+print("-"*50)
 driver.quit()  # Закрываем браузер после завершения работы
 
