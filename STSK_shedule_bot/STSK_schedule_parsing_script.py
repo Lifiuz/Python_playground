@@ -37,7 +37,7 @@ def load_credentials():
 def login(username, password):
     try:
         # Ожидание появления полей ввода
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.ID, "os_username"))
         )
 
@@ -72,15 +72,15 @@ try:
         login(username, password)
 
         # Добавляем ожидание загрузки после авторизации
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 8).until(
             EC.url_changes(driver.current_url)
         )
 except Exception as e:
     print(f"Критическая ошибка: {str(e)}")
 
 try:
-    # Ожидание до 10 секунд, пока элемент с определенным селектором не станет доступен
-    element = WebDriverWait(driver, 10).until(
+    # Ожидание пока элемент с определенным селектором не станет доступен
+    element = WebDriverWait(driver, 8).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="main-content"]/div[1]/table'))
     )
     print("Страница успешно открылась!\nСейчас будем парсить...")
@@ -93,7 +93,7 @@ table = driver.find_element(By.XPATH, '//*[@id="main-content"]/div[1]/table')
 rows = table.find_elements(By.TAG_NAME, 'tr')
 
 # Итерация по строкам и извлечение данных
-keywords = ["МСК", "ПРМ", "ЕКБ", "СПб", "НСК", "РНД"] #не будет работать если кто то поменяет
+keywords = ["МСК", "ПРМ", "ЕКБ", "СПб", "НСК", "РНД"] #не будет работать если кто-то поменяет
 engineers_schedule = []
 engineer_fio = []
 all_engineers = []
@@ -128,7 +128,7 @@ with open ('debugging.txt', 'w', encoding='utf-8') as debuggingTXT:
                 engineers_schedule.append("?")
 
 # Записываем все данные в JSON файл один раз после завершения цикла
-with open('july_engineers_schedule.json', 'w', encoding='utf-8') as engineersJSON:
+with open('schedule_engineers/07_2025.json', 'w', encoding='utf-8') as engineersJSON:
     # Создаем основной объект, который будет содержать дату и данные
     output_data = {
         "Время последнего обновления": current_date,
