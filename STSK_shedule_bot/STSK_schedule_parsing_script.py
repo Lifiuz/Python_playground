@@ -1,4 +1,6 @@
 import json
+import psycopg2
+from psycopg2 import Error
 from datetime import datetime
 from selenium import webdriver
 from selenium.common import NoSuchElementException
@@ -8,8 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 print("-"*50)
 print("Открываем kb...")
-
 driver = webdriver.Chrome()
+
 try:
     driver.get('https://kb.ertelecom.ru/pages/viewpage.action?pageId=1027971596')
 except:
@@ -126,6 +128,15 @@ with open ('debugging.txt', 'w', encoding='utf-8') as debuggingTXT:
                 engineers_schedule.append("о")
             if cell.text == "?":
                 engineers_schedule.append("?")
+
+try:
+    # Подключиться к существующей базе данных
+    connection = psycopg2.connect(user="postgres",
+                                  password="Lifius!",
+                                  host="127.0.0.1",
+                                  port="5432",
+                                  database="postgres_db")
+    cursor = connection.cursor()
 
 # Записываем все данные в JSON файл один раз после завершения цикла
 with open('schedule_engineers/07_2025.json', 'w', encoding='utf-8') as engineersJSON:
