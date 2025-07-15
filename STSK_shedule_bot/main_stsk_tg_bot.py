@@ -1,8 +1,12 @@
 import logging
 import os
+import time
+import telegram.error
+import psycopg2
+from telegram.error import NetworkError
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
-import psycopg2
+from datetime import timezone
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext, MessageHandler, Filters
 
@@ -43,9 +47,28 @@ months = {
     "07": "Июль", "08": "Август", "09": "Сентябрь",
     "10": "Октябрь", "11": "Ноябрь", "12": "Декабрь"
 }
+#В случае ошибки интернета, пытается снова отправить данные
+def safe_reply_text(bot_method, *args, **kwargs):
+    try:
+        return bot_method(*args, **kwargs)
+    except NetworkError as e:
+        logging.warning(f"Network error: {e}. Retrying in 4 seconds...")
+        time.sleep(4)
+        try:
+            return bot_method(*args, **kwargs)
+        except Exception as e:
+            logging.error(f"Failed again: {e}")
+            return None
 
+# Безопасный ответ на callback-запрос (если нет интернета)
+def safe_query_answer(query):
+    try:
+        query.answer()
+    except (telegram.error.NetworkError, telegram.error.TelegramError) as e:
+        logging.warning(f"Ошибка при ответе на callback: {e}")
+
+#Устанавливает соединение с базой данных
 def get_db_connection():
-    """Устанавливает соединение с базой данных"""
     return psycopg2.connect(**DB_CONFIG)
 
 def get_engineers_list():
@@ -60,8 +83,8 @@ def get_engineers_list():
 
 engineer_list = get_engineers_list()
 
+#Получает время последнего обновления для указанного месяца
 def get_update_time(month):
-    """Получает время последнего обновления для указанного месяца"""
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
@@ -105,8 +128,9 @@ def get_engineer_info(engineer_name):
     finally:
         conn.close()
 
+#Получает расписание инженера за указанный месяц
 def get_engineer_schedule(engineer_id, year, month):
-    """Получает расписание инженера за указанный месяц"""
+
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
@@ -120,8 +144,8 @@ def get_engineer_schedule(engineer_id, year, month):
     finally:
         conn.close()
 
+#Получает расписание всех инженеров на указанный день
 def get_day_schedule(year, month, day):
-    """Получает расписание всех инженеров на указанный день"""
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
@@ -138,8 +162,8 @@ def get_day_schedule(year, month, day):
     finally:
         conn.close()
 
+#Получает инженеров, которые сейчас на смене
 def get_current_shift_engineers(year, month, day, current_hour):
-    """Получает инженеров, которые сейчас на смене"""
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
@@ -190,8 +214,8 @@ def get_current_shift_engineers(year, month, day, current_hour):
     finally:
         conn.close()
 
+#Получает название отдела по ID
 def get_department_name(department_id):
-    """Получает название отдела по ID"""
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
@@ -204,10 +228,11 @@ def get_department_name(department_id):
     finally:
         conn.close()
 
+#Генерирует сообщение о текущих сменах (с использованием БД)
 def generate_shift_message(month, day_index, current_hour):
-    """Генерирует сообщение о текущих сменах (с использованием БД)"""
+
     try:
-        now_utc = datetime.utcnow()
+        now_utc = datetime.now(timezone.utc)
         now_msk = now_utc + timedelta(hours=3)
         year = now_msk.year
         day = now_msk.day
@@ -236,63 +261,32 @@ def generate_shift_message(month, day_index, current_hour):
     except Exception as e:
         return f"⚠️ Ошибка при чтении данных: {e}"
 
-def show_main_menu(update_or_query, context):
-    """Показывает главное меню бота"""
-    now_utc = datetime.utcnow()
-    now_msk = now_utc + timedelta(hours=3)
-    current_hour = now_msk.hour
-    day_index = now_msk.day - 1
-    month = now_msk.strftime("%m")
+#Показывает всех, кто имеет смену в этот день (неважно, сейчас ли работает)
+def generate_shift_message_show_all(year, month, day):
+    return generate_shift_message_static(year, month, day)
 
-    weekdays = {
-        0: "Понедельник", 1: "Вторник", 2: "Среда",
-        3: "Четверг", 4: "Пятница", 5: "Суббота", 6: "Воскресенье"
-    }
+#Показывает всех, кто работал в выбранный день (исключая 'в' и 'о')
+def generate_shift_message_static(year, month, day):
 
-    months_ru = {
-        1: "января", 2: "февраля", 3: "марта",
-        4: "апреля", 5: "мая", 6: "июня",
-        7: "июля", 8: "августа", 9: "сентября",
-        10: "октября", 11: "ноября", 12: "декабря"
-    }
-
-    formatted_date = (f"{weekdays[now_msk.weekday()]}, {now_msk.day} "
-                      f"{months_ru[now_msk.month]} {now_msk.strftime('%H:%M')}")
-
-    shift_message = generate_shift_message(month, day_index, current_hour)
-
-    message = (f"📅 <b>Текущая дата и время (МСК):</b> {formatted_date}\n"
-               f"🕐 Время указано по Московскому времени (UTC+3)\n\n"
-               f"👷‍♂️ <b>Сейчас на смене (МСК):</b>\n\n{shift_message}")
-
-    keyboard = [
-        [InlineKeyboardButton("📆 Поиск по дате", callback_data='choose_month')],
-        [InlineKeyboardButton("🔎 Поиск смен по инженеру", callback_data='choose_engineer')],
-        [InlineKeyboardButton("ℹ️ О боте", callback_data='about_bot')],
-        [InlineKeyboardButton("✉️ Обратная связь", callback_data='feedback')]
-    ]
-
-    if isinstance(update_or_query, Update):
-        update_or_query.message.reply_text(
-            message,
-            reply_markup=InlineKeyboardMarkup(keyboard),
-            parse_mode='HTML',
-            disable_web_page_preview=True
-        )
-    elif hasattr(update_or_query, 'edit_message_text'):
-        update_or_query.edit_message_text(
-            message,
-            reply_markup=InlineKeyboardMarkup(keyboard),
-            parse_mode='HTML',
-            disable_web_page_preview=True
-        )
-    elif hasattr(update_or_query, 'callback_query') and update_or_query.callback_query:
-        update_or_query.callback_query.edit_message_text(
-            message,
-            reply_markup=InlineKeyboardMarkup(keyboard),
-            parse_mode='HTML',
-            disable_web_page_preview=True
-        )
+    try:
+        schedule_data = get_day_schedule(year, month, day)
+        update_time = get_update_time(int(month))
+        working_engineers = []
+        for name, shift_value, shift_duration, department_id in schedule_data:
+            shift_start = int(shift_value)
+            shift_duration = int(shift_duration) if shift_duration else 12
+            shift_end = shift_start + shift_duration
+            start_str = f"{shift_start % 24:02d}:00"
+            end_str = f"{shift_end % 24:02d}:00"
+            working_engineers.append(
+                f"👤 <b>{name}</b>\n🕒 Смена: <b>{start_str}–{end_str}</b>\n🏢 Отдел: {get_department_name(department_id)}\n"
+            )
+        if not working_engineers:
+            working_engineers.append("Никто не работал")
+        working_engineers.append(f"\nОбновлено: <i>{update_time}</i>")
+        return "\n".join(working_engineers)
+    except Exception as e:
+        return f"⚠️ Ошибка: {e}"
 
 # Обработчик команды /start
 def start(update: Update, context: CallbackContext):
@@ -309,9 +303,8 @@ def start(update: Update, context: CallbackContext):
         f.write(
             f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Пользователь вошёл в бота: {user.full_name} | @{user.username} | ID: {user.id}\n")
 
-
+# Обрабатывает введенный пароль
 def handle_password(update: Update, context: CallbackContext):
-    """Обрабатывает введенный пароль"""
     if not context.user_data.get('waiting_feedback'):
         if update.message.text == ENTRY_PASSWORD:
             context.user_data['authenticated'] = True
@@ -343,15 +336,14 @@ def handle_feedback_entry(update: Update, context: CallbackContext):
     else:
         update.message.reply_text("Сначала нажмите кнопку 'Обратная связь'")
 
-
+#Запрашивает обратную связь
 def ask_feedback(update, context):
-    """Запрашивает обратную связь"""
+
+    keyboard = [[InlineKeyboardButton("🔙 Назад", callback_data='main_who')]]
     try:
         # Читаем содержимое из файла
         with open("ask_feedback.txt", "r", encoding="utf-8") as file:
             feedback_text = file.read().strip()
-
-        keyboard = [[InlineKeyboardButton("🔙 Назад", callback_data='main_who')]]
         context.user_data['waiting_feedback'] = True
 
         # Используем прочитанный текст из файла
@@ -413,8 +405,9 @@ def choose_month_for_engineer(update, context, engineer_index):
 
     update.callback_query.edit_message_text("Выберите месяц:", reply_markup=InlineKeyboardMarkup(keyboard))
 
+#Показывает месяцы от января до текущего (включительно)
 def choose_month(update, context):
-    """Показывает месяцы от января до текущего (включительно)"""
+
     current_month = int(datetime.now().strftime("%m"))
     keyboard = []
 
@@ -429,8 +422,8 @@ def choose_month(update, context):
 
     update.callback_query.edit_message_text("Выберите месяц:", reply_markup=InlineKeyboardMarkup(keyboard))
 
+# Выбор дня с учетом только прошедших дней в текущем месяце
 def choose_day(update, context, month):
-    """Выбор дня с учетом только прошедших дней в текущем месяце"""
     current_day = int(datetime.now().strftime("%d"))
     current_month = datetime.now().strftime("%m")
     keyboard = []
@@ -452,23 +445,21 @@ def choose_day(update, context, month):
 
     update.callback_query.edit_message_text("Выберите день:", reply_markup=InlineKeyboardMarkup(keyboard))
 
+#Показывает информацию о боте из файла about.txt
 def show_about(update, context):
-    """Показывает информацию о боте из файла about.txt"""
     try:
         with open("about.txt", "r", encoding="utf-8") as f:
             about_text = f.read().strip()
 
         keyboard = [[InlineKeyboardButton("🏠 В начало", callback_data='main_who')]]
-        update.edit_message_text(about_text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode='HTML')
+        update.edit_message_text(about_text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode='HTML', disable_web_page_preview=True)
     except FileNotFoundError:
         update.edit_message_text("❗ Файл about.txt не найден.")
     except Exception as e:
         update.edit_message_text(f"⚠️ Ошибка при загрузке информации: {e}")
 
-
 #Показывает, кто работал в выбранный день
 def show_selected_day(update, context, month, day):
-
     try:
         year = datetime.now().year
         schedule_data = get_day_schedule(year, month, day)
@@ -496,11 +487,13 @@ def show_selected_day(update, context, month, day):
                 f"🏢 Отдел: {get_department_name(department_id)}\n"
             )
 
-        month_name = months.get(month, month)
+        month_numeric = f"{int(month):02d}"
+        date_obj = datetime(datetime.now().year, int(month), int(day))
+        weekday_name = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"][
+            date_obj.weekday()]
         if working_engineers:
             message_parts = [
-                f"📅 <b>Работали {day}.{month_name}:</b>",
-                "",
+                f"📅 <b>Работали {day}.{month_numeric} ({weekday_name}):</b>",
                 *working_engineers,
                 "",
                 f"<i>Обновлено: {update_time}</i>"
@@ -508,7 +501,7 @@ def show_selected_day(update, context, month, day):
             message = "\n".join(message_parts)
         else:
             message = "\n".join([
-                f"📅 <b>{day}.{month_name} никто не работал</b>",
+                f"📅 <b>{day}.{month_numeric} никто не работал</b>",
                 "",
                 f"<i>Обновлено: {update_time}</i>"
             ])
@@ -565,17 +558,116 @@ def show_engineer_schedule(update, context, month):
             reply_markup=InlineKeyboardMarkup(keyboard)
         )
 
+#Показывает главное меню бота
+def show_main_menu(update_or_query, context, override_day=None, mode="now"):
+    now_utc = datetime.now(timezone.utc)
+    now_msk = now_utc + timedelta(hours=3)
+    year = now_msk.year
+    today = now_msk.date()
+
+    if override_day is not None:
+        display_date = today + timedelta(days=override_day)
+    else:
+        display_date = today
+
+    current_hour = now_msk.hour if mode == "now" else 0
+    day_index = display_date.day - 1
+    month = f"{display_date.month:02d}"
+    day = display_date.day
+
+    weekdays = {
+        0: "Понедельник", 1: "Вторник", 2: "Среда",
+        3: "Четверг", 4: "Пятница", 5: "Суббота", 6: "Воскресенье"
+    }
+
+    months_ru = {
+        1: "января", 2: "февраля", 3: "марта",
+        4: "апреля", 5: "мая", 6: "июня",
+        7: "июля", 8: "августа", 9: "сентября",
+        10: "октября", 11: "ноября", 12: "декабря"
+    }
+
+    formatted_date = f"{weekdays[display_date.weekday()]}, {display_date.day} {months_ru[display_date.month]}"
+
+    if mode == "now":
+        shift_message = generate_shift_message(month, day_index, current_hour)
+    elif mode == "all_today":
+        shift_message = generate_shift_message_show_all(year, month, day)
+    else:
+        shift_message = generate_shift_message_static(year, month, day)
+
+    message = (f"📅 <b>Дата (МСК):</b> {formatted_date}\n"
+               f"🕐 Время указано по Московскому времени (UTC+3)\n\n"
+               f"👷‍♂️ <b>Инженеры:</b>\n\n{shift_message}")
+
+    if mode == "now":
+        nav_buttons = [
+            InlineKeyboardButton("⬅️ Вчера", callback_data='day_minus'),
+            InlineKeyboardButton("📋 Показать всех", callback_data='show_all_today'),
+            InlineKeyboardButton("➡️ Завтра", callback_data='day_plus')
+        ]
+    elif mode == "all_today":
+        nav_buttons = [
+            InlineKeyboardButton("⬅️ Вчера", callback_data='day_minus'),
+            InlineKeyboardButton("🕐 Только сейчас", callback_data='main_who'),
+            InlineKeyboardButton("➡️ Завтра", callback_data='day_plus')
+        ]
+    else:
+        nav_buttons = []
+        if override_day != -1:
+            nav_buttons.append(InlineKeyboardButton("⬅️ Вчера", callback_data='day_minus'))
+        nav_buttons.append(InlineKeyboardButton("📆 Сегодня", callback_data='main_who'))
+        if override_day != 1:
+            nav_buttons.append(InlineKeyboardButton("➡️ Завтра", callback_data='day_plus'))
+
+    keyboard = [nav_buttons]
+    keyboard += [
+        [InlineKeyboardButton("📆 Поиск по дате", callback_data='choose_month')],
+        [InlineKeyboardButton("🔎 Поиск смен по инженеру", callback_data='choose_engineer')],
+        [InlineKeyboardButton("ℹ️ О боте", callback_data='about_bot')],
+        [InlineKeyboardButton("✉️ Обратная связь", callback_data='feedback')]
+    ]
+
+    context.user_data['last_action'] = ('main_menu', {
+        'update_or_query': update_or_query,
+        'context': context,
+        'override_day': override_day,
+        'mode': mode
+    })
+
+    if isinstance(update_or_query, Update):
+        safe_reply_text(
+            update_or_query.message.reply_text,
+            message,
+            reply_markup=InlineKeyboardMarkup(keyboard),
+            parse_mode='HTML',
+            disable_web_page_preview=True
+        )
+    elif hasattr(update_or_query, 'edit_message_text'):
+        safe_reply_text(
+            update_or_query.edit_message_text,
+            message,
+            reply_markup=InlineKeyboardMarkup(keyboard),
+            parse_mode='HTML',
+            disable_web_page_preview=True
+        )
+    elif hasattr(update_or_query, 'callback_query') and update_or_query.callback_query:
+        safe_reply_text(
+            update_or_query.callback_query.edit_message_text,
+            message,
+            reply_markup=InlineKeyboardMarkup(keyboard),
+            parse_mode='HTML',
+            disable_web_page_preview=True
+        )
+
 # Обрабатывает нажатия кнопок
 def handle_buttons(update: Update, context: CallbackContext):
     query = update.callback_query
     data = query.data
-    query.answer()
+    safe_query_answer(query)
 
     user = update.effective_user
-    # Логируем нажатие кнопки
     logging.info(f"Пользователь {user.id} нажал кнопку: {data}")
-
-    # Добавляем запись в лог-файл
     with open('log.txt', 'a', encoding='utf-8') as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Пользователь {user.id} нажал кнопку: {data}\n")
 
@@ -586,15 +678,18 @@ def handle_buttons(update: Update, context: CallbackContext):
     if data == 'about_bot':
         show_about(query, context)
     elif data == 'main_who':
-        show_main_menu(query, context)
+        show_main_menu(query, context, override_day=0, mode="now")
+    elif data == 'show_all_today':
+        show_main_menu(query, context, override_day=0, mode="all_today")
+    elif data == 'day_minus':
+        show_main_menu(query, context, override_day=-1, mode="static")
+    elif data == 'day_plus':
+        show_main_menu(query, context, override_day=1, mode="static")
     elif data == 'choose_month':
         choose_month(update, context)
-    elif data.startswith('month_'):
-        month = data.split('_')[1]
-        choose_day(update, context, month)
     elif data.startswith('date_'):
         _, month, day = data.split('_')
-        show_selected_day(update, context, month, day)
+        show_selected_day(update, context, month, int(day))
     elif data == 'choose_engineer':
         choose_engineer(update, context)
     elif data.startswith('engineer_'):
@@ -605,9 +700,13 @@ def handle_buttons(update: Update, context: CallbackContext):
         show_engineer_schedule(update, context, month)
     elif data == 'feedback':
         ask_feedback(update, context)
+    elif data.startswith('month_'):
+        month = data.split('_')[1]
+        choose_day(update, context, month)
 
+
+#Основная функция запуска бота
 def main():
-    """Основная функция запуска бота"""
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
 

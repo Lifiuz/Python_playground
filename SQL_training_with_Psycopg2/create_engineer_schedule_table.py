@@ -48,7 +48,7 @@ def main():
         # Подключение к базе данных
         conn = psycopg2.connect(
             user="postgres",
-            password="Lifius!",
+            password="",
             host="127.0.0.1",
             port="5432",
             database="stsk_tg_bot"

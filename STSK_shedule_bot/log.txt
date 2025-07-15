@@ -1,0 +1,1484 @@
+2025-07-14 21:39:18,880 - Scheduler started
+2025-07-14 21:39:24,757 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-14 21:39:24 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-14 21:39:39,331 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-14 21:39:39 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-14 21:39:45,147 - Пользователь 406497047 нажал кнопку: engineer_16
+2025-07-14 21:39:45 - Пользователь 406497047 нажал кнопку: engineer_16
+2025-07-14 21:39:48,356 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-14 21:39:48 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-14 21:39:49,399 - Пользователь 406497047 нажал кнопку: engineer_0
+2025-07-14 21:39:49 - Пользователь 406497047 нажал кнопку: engineer_0
+2025-07-14 22:17:46,204 - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-14 22:17:46,206 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 3140, in get_updates
+    self._post(
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-14 22:39:51,091 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-14 22:39:51 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-14 22:39:52,919 - Пользователь запустил бота: Pavel | @Shapqa12 | ID: 776166772
+2025-07-14 22:39:52 - Пользователь вошёл в бота: Pavel | @Shapqa12 | ID: 776166772
+2025-07-14 22:40:05,874 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-14 22:40:05 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-14 22:40:09,060 - Пользователь 776166772 нажал кнопку: month_07
+2025-07-14 22:40:09 - Пользователь 776166772 нажал кнопку: month_07
+2025-07-14 22:40:11,000 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-14 22:40:11 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-14 22:40:12,871 - Пользователь 776166772 нажал кнопку: main_who
+2025-07-14 22:40:12 - Пользователь 776166772 нажал кнопку: main_who
+2025-07-14 22:40:15,397 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-14 22:40:15 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-14 22:40:17,240 - Пользователь 776166772 нажал кнопку: main_who
+2025-07-14 22:40:17 - Пользователь 776166772 нажал кнопку: main_who
+2025-07-14 22:41:30,811 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-14 22:41:30 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-14 22:41:33,434 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-14 22:41:33 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-14 22:41:36,572 - Пользователь 406497047 нажал кнопку: engineer_20
+2025-07-14 22:41:36 - Пользователь 406497047 нажал кнопку: engineer_20
+2025-07-14 22:41:37,905 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-14 22:41:37 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-14 22:41:53,402 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-14 22:41:53 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-14 22:41:55,611 - Пользователь 776166772 нажал кнопку: engineer_20
+2025-07-14 22:41:55 - Пользователь 776166772 нажал кнопку: engineer_20
+2025-07-14 22:41:56,954 - Пользователь 776166772 нажал кнопку: engmonth_07
+2025-07-14 22:41:56 - Пользователь 776166772 нажал кнопку: engmonth_07
+2025-07-14 23:36:06,669 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_TGbot_body.py", line 570, in handle_buttons
+    query.answer()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 166, in answer
+    return self.bot.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2793, in answer_callback_query
+    result = self._post('answerCallbackQuery', data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-14 23:36:39,961 - Scheduler started
+2025-07-14 23:36:44,143 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-14 23:36:44 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 00:37:04,995 - Пользователь 406497047 нажал кнопку: feedback
+2025-07-15 00:37:04 - Пользователь 406497047 нажал кнопку: feedback
+2025-07-15 00:37:08,392 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 00:37:08 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 00:37:12,477 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 00:37:12 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 00:37:14,722 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 00:37:14 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 00:37:51,272 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 00:37:51 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 00:37:56,387 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 00:37:56 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 00:40:15,374 - Received signal 2 (SIGINT), stopping...
+2025-07-15 00:40:15,377 - Scheduler has been shut down
+2025-07-15 00:40:19,946 - Scheduler started
+2025-07-15 00:40:22,733 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 00:40:22 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 00:41:42,857 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 00:41:42 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 00:41:44,282 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 00:41:44 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 00:58:39,380 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 00:58:39 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 01:04:33,455 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:04:33 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:04:43,086 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:04:43 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:04:46,086 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 01:04:46 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 01:04:46,885 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:04:46 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:05:04,644 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 01:05:04 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 01:05:05,957 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:05:05 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 01:12:24,643 - Received signal 2 (SIGINT), stopping...
+2025-07-15 01:12:24,643 - Scheduler has been shut down
+2025-07-15 10:39:18,187 - Scheduler started
+2025-07-15 10:39:24,275 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 10:39:24 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 10:39:41,237 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 10:39:41 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 10:39:42,232 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:39:42 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:44:36,912 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 10:44:36 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 10:44:39,561 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:44:39 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:54:59,998 - Received signal 2 (SIGINT), stopping...
+2025-07-15 10:54:59,998 - Scheduler has been shut down
+2025-07-15 10:55:09,960 - Scheduler started
+2025-07-15 10:55:18,365 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 10:55:18 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 10:56:16,390 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:56:16 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:57:42,604 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 10:57:42 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 10:57:45,464 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 10:57:45 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 11:20:03,736 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 572, in handle_buttons
+    query.answer()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 166, in answer
+    return self.bot.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2793, in answer_callback_query
+    result = self._post('answerCallbackQuery', data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 11:21:08,914 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:21:08 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:22:22,071 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 11:22:22 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 11:22:25,715 - Пользователь 406497047 нажал кнопку: engineer_31
+2025-07-15 11:22:25 - Пользователь 406497047 нажал кнопку: engineer_31
+2025-07-15 11:22:26,954 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-15 11:22:26 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-15 11:22:32,335 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 11:22:32 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 11:22:36,797 - Пользователь 406497047 нажал кнопку: engineer_2
+2025-07-15 11:22:36 - Пользователь 406497047 нажал кнопку: engineer_2
+2025-07-15 11:22:37,815 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-15 11:22:37 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-15 11:22:43,141 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 11:22:43 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 11:22:45,631 - Пользователь 406497047 нажал кнопку: engineer_27
+2025-07-15 11:22:45 - Пользователь 406497047 нажал кнопку: engineer_27
+2025-07-15 11:22:46,743 - Пользователь 406497047 нажал кнопку: engmonth_02
+2025-07-15 11:22:46 - Пользователь 406497047 нажал кнопку: engmonth_02
+2025-07-15 11:22:52,215 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:22:52 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:40:56,355 - Received signal 2 (SIGINT), stopping...
+2025-07-15 11:40:56,359 - Scheduler has been shut down
+2025-07-15 11:41:08,589 - Scheduler started
+2025-07-15 11:42:11,138 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:42:11 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:42:18,890 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:42:18 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:42:33,811 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:42:33 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:42:35,165 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 641, in handle_buttons
+    show_main_menu(query, context, override_day=-1, mode="static")
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 336, in show_main_menu
+    update_or_query.edit_message_text(
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 216, in edit_message_text
+    return self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\message.py", line 2246, in edit_text
+    return self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2861, in edit_message_text
+    return self._message(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-07-15 11:43:10,628 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:43:10 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:43:15,564 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 11:43:15 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 11:43:26,994 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 11:43:26 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 11:54:06,333 - Received signal 2 (SIGINT), stopping...
+2025-07-15 11:54:06,334 - Scheduler has been shut down
+2025-07-15 11:54:15,076 - Scheduler started
+2025-07-15 11:54:17,904 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:54:17 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:54:22,347 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:54:22 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:54:31,976 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 11:54:31 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 11:54:36,999 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:54:37 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:55:41,721 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 11:55:41 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 11:56:27,991 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:56:27 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:57:33,716 - Received signal 2 (SIGINT), stopping...
+2025-07-15 11:57:33,716 - Scheduler has been shut down
+2025-07-15 11:57:40,171 - Scheduler started
+2025-07-15 11:57:42,786 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:57:42 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:57:47,454 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:57:47 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 11:57:53,383 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:57:53 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:58:11,117 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:58:11 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 11:58:46,534 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 11:58:46 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 11:58:51,876 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 11:58:51 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:00:03,129 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:00:03,129 - Scheduler has been shut down
+2025-07-15 12:00:13,185 - Scheduler started
+2025-07-15 12:00:15,804 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:00:15 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:00:19,764 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:00:19 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:00:27,275 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:00:27 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:06:39,364 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:06:39,364 - Scheduler has been shut down
+2025-07-15 12:06:45,278 - Scheduler started
+2025-07-15 12:06:59,901 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:06:59 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:07:03,248 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:07:03 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:07:06,596 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:07:06 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:09:20,354 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:09:20 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:26:29,040 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:26:29,040 - Scheduler has been shut down
+2025-07-15 12:27:19,789 - Scheduler started
+2025-07-15 12:27:30,328 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:27:30 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:27:34,646 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:27:34 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:27:37,050 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:27:37 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:27:40,193 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 12:27:40 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 12:27:44,986 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:27:44 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:27:48,337 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:27:48 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:28:00,713 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:28:00 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:28:37,813 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:28:37 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:29:13,203 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:29:13 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:33:03,107 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:33:03,107 - Scheduler has been shut down
+2025-07-15 12:33:09,573 - Scheduler started
+2025-07-15 12:33:12,279 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:33:12 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:40:09,447 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:40:09 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:40:13,152 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:40:13 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:40:35,669 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:40:35,669 - Scheduler has been shut down
+2025-07-15 12:40:41,842 - Scheduler started
+2025-07-15 12:40:44,869 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:40:44 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:40:47,672 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:40:47 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:41:19,471 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:41:19 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:50:06,210 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:50:06,210 - Scheduler has been shut down
+2025-07-15 12:50:17,640 - Scheduler started
+2025-07-15 12:50:20,530 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:50:20 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:50:25,022 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:50:25 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:50:30,703 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:50:30 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:50:33,443 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:50:33 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 12:50:43,971 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:50:43 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:50:46,447 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:50:46 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:50:49,575 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 12:50:49 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 12:51:04,153 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:51:04 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:51:07,353 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:51:07 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 12:51:19,098 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:51:19 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 12:56:30,214 - Received signal 2 (SIGINT), stopping...
+2025-07-15 12:56:30,214 - Scheduler has been shut down
+2025-07-15 12:56:35,764 - Scheduler started
+2025-07-15 12:56:38,437 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 12:56:38 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:04:42,541 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:04:42 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:04:50,005 - Received signal 2 (SIGINT), stopping...
+2025-07-15 13:04:50,006 - Scheduler has been shut down
+2025-07-15 13:04:55,563 - Scheduler started
+2025-07-15 13:04:58,325 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:04:58 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:05:01,093 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:05:01 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:05:04,073 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:05:04 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:06:02,273 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 13:06:02 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 13:06:04,847 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:06:04 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:06:07,277 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 13:06:07 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 13:06:54,661 - Received signal 2 (SIGINT), stopping...
+2025-07-15 13:06:54,661 - Scheduler has been shut down
+2025-07-15 13:06:59,455 - Scheduler started
+2025-07-15 13:07:03,364 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:07:03 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:07:06,725 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:07:06 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:07:10,767 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:07:10 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:07:22,730 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:07:22 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:07:33,297 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:07:33 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:08:34,380 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:08:34 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:33:31,453 - Received signal 2 (SIGINT), stopping...
+2025-07-15 13:33:31,453 - Scheduler has been shut down
+2025-07-15 13:33:35,136 - Scheduler started
+2025-07-15 13:34:15,934 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:34:15 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:34:19,634 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:34:19 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:34:29,432 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:34:29 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:35:38,519 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:35:38 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:40:11,861 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 13:40:11 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 13:40:16,336 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:40:16 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:56:20,494 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 637, in handle_buttons
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 166, in answer
+    return self.bot.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2793, in answer_callback_query
+    result = self._post('answerCallbackQuery', data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 13:56:30,138 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:56:30 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 13:56:35,196 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:56:35 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 13:56:39,273 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 13:56:39 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 13:56:44,036 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 13:56:44 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 13:56:47,383 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 13:56:47 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 13:56:48,897 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 13:56:48 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 13:56:53,784 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:56:53 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:56:55,807 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:56:55 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 13:56:56,753 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 651, in handle_buttons
+    elif data == 'show_all_today':
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 619, in show_main_menu
+    message,
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 216, in edit_message_text
+    return self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\message.py", line 2246, in edit_text
+    return self.bot.edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2861, in edit_message_text
+    return self._message(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-07-15 14:14:39,571 - Received signal 2 (SIGINT), stopping...
+2025-07-15 14:14:39,572 - Scheduler has been shut down
+2025-07-15 14:14:50,776 - Scheduler started
+2025-07-15 14:14:54,213 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 14:14:54 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 14:15:06,878 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:15:06 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:18:06,738 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:18:06 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:18:12,319 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:18:12 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:18:16,993 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 14:18:16 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 14:18:19,952 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 14:18:19 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 14:18:22,282 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:18:22 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:18:44,483 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 14:18:44 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 14:18:45,622 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:18:45 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:18:48,202 - Пользователь 406497047 нажал кнопку: feedback
+2025-07-15 14:18:48 - Пользователь 406497047 нажал кнопку: feedback
+2025-07-15 14:33:45,294 - Received signal 2 (SIGINT), stopping...
+2025-07-15 14:33:45,295 - Scheduler has been shut down
+2025-07-15 14:33:51,892 - Scheduler started
+2025-07-15 14:33:54,588 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 14:33:54 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 14:33:58,744 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 14:33:58 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 14:34:01,601 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:34:01 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:34:04,134 - Пользователь 406497047 нажал кнопку: month_05
+2025-07-15 14:34:04 - Пользователь 406497047 нажал кнопку: month_05
+2025-07-15 14:34:07,938 - Пользователь 406497047 нажал кнопку: month_06
+2025-07-15 14:34:07 - Пользователь 406497047 нажал кнопку: month_06
+2025-07-15 14:34:11,262 - Пользователь 406497047 нажал кнопку: month_07
+2025-07-15 14:34:11 - Пользователь 406497047 нажал кнопку: month_07
+2025-07-15 14:34:13,143 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:34:13 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:34:16,066 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:34:16 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:34:17,135 - Пользователь 406497047 нажал кнопку: engineer_6
+2025-07-15 14:34:17 - Пользователь 406497047 нажал кнопку: engineer_6
+2025-07-15 14:34:18,229 - Пользователь 406497047 нажал кнопку: engmonth_03
+2025-07-15 14:34:18 - Пользователь 406497047 нажал кнопку: engmonth_03
+2025-07-15 14:34:20,913 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:34:20 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:34:26,131 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:34:26 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:34:27,959 - Пользователь 406497047 нажал кнопку: engineer_4
+2025-07-15 14:34:27 - Пользователь 406497047 нажал кнопку: engineer_4
+2025-07-15 14:34:29,423 - Пользователь 406497047 нажал кнопку: engmonth_04
+2025-07-15 14:34:29 - Пользователь 406497047 нажал кнопку: engmonth_04
+2025-07-15 14:34:30,989 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:34:30 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:34:35,367 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:34:35 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:34:36,803 - Пользователь 406497047 нажал кнопку: month_04
+2025-07-15 14:34:36 - Пользователь 406497047 нажал кнопку: month_04
+2025-07-15 14:35:04,005 - Пользователь 406497047 нажал кнопку: month_01
+2025-07-15 14:35:04 - Пользователь 406497047 нажал кнопку: month_01
+2025-07-15 14:35:26,340 - Received signal 2 (SIGINT), stopping...
+2025-07-15 14:35:26,340 - Scheduler has been shut down
+2025-07-15 14:35:34,917 - Scheduler started
+2025-07-15 14:35:37,502 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 14:35:37 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 14:35:40,120 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:35:40 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 14:35:41,338 - Пользователь 406497047 нажал кнопку: month_02
+2025-07-15 14:35:41 - Пользователь 406497047 нажал кнопку: month_02
+2025-07-15 14:35:42,424 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:35:42 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:35:55,365 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:35:55 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:35:56,828 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:35:56 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:57:49,583 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 637, in handle_buttons
+    query.answer()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 166, in answer
+    return self.bot.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2793, in answer_callback_query
+    result = self._post('answerCallbackQuery', data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 14:58:04,020 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:58:04 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 14:58:06,683 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:58:06 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:58:13,620 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 14:58:13 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 14:58:15,678 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:58:15 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 14:58:18,148 - Пользователь 406497047 нажал кнопку: feedback
+2025-07-15 14:58:18 - Пользователь 406497047 нажал кнопку: feedback
+2025-07-15 15:07:01,895 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 15:07:01 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 15:07:04,434 - Пользователь 406497047 нажал кнопку: month_01
+2025-07-15 15:07:04 - Пользователь 406497047 нажал кнопку: month_01
+2025-07-15 15:07:06,399 - Пользователь 406497047 нажал кнопку: date_01_24
+2025-07-15 15:07:06 - Пользователь 406497047 нажал кнопку: date_01_24
+2025-07-15 15:23:06,899 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 270, in start
+    show_main_menu(update, context)
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 612, in show_main_menu
+    update_or_query.message.reply_text(
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\message.py", line 977, in reply_text
+    return self.bot.send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 534, in send_message
+    return self._message(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 15:23:27,109 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 15:23:27 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 15:37:02,223 - Received signal 2 (SIGINT), stopping...
+2025-07-15 15:37:02,229 - Scheduler has been shut down
+2025-07-15 15:37:07,666 - Scheduler started
+2025-07-15 15:37:21,248 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 15:37:21 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 15:37:29,315 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 15:37:29 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 15:37:32,052 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 15:37:32 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 15:37:47,642 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 15:37:47 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 15:37:56,551 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 15:37:56 - Пользователь 406497047 нажал кнопку: day_minus
+2025-07-15 15:38:05,687 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 15:38:05 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 15:38:19,982 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 15:38:19 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 15:40:03,497 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 15:40:03 - Пользователь 406497047 нажал кнопку: about_bot
+2025-07-15 15:40:06,429 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 15:40:06 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:00:15,928 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 656, in handle_buttons
+    query.answer()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\callbackquery.py", line 166, in answer
+    return self.bot.answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 2793, in answer_callback_query
+    result = self._post('answerCallbackQuery', data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 16:20:37,172 - Received signal 2 (SIGINT), stopping...
+2025-07-15 16:20:37,174 - Scheduler has been shut down
+2025-07-15 16:20:45,662 - Scheduler started
+2025-07-15 16:20:48,635 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 16:20:48 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 16:20:54,320 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:20:54 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:20:56,068 - Пользователь 406497047 нажал кнопку: month_06
+2025-07-15 16:20:56 - Пользователь 406497047 нажал кнопку: month_06
+2025-07-15 16:20:57,253 - Пользователь 406497047 нажал кнопку: date_06_20
+2025-07-15 16:20:57 - Пользователь 406497047 нажал кнопку: date_06_20
+2025-07-15 16:21:37,221 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:21:37 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:21:40,860 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:21:40 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:21:43,606 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:21:43 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:21:45,541 - Пользователь 406497047 нажал кнопку: month_06
+2025-07-15 16:21:45 - Пользователь 406497047 нажал кнопку: month_06
+2025-07-15 16:21:47,016 - Пользователь 406497047 нажал кнопку: date_06_29
+2025-07-15 16:21:47 - Пользователь 406497047 нажал кнопку: date_06_29
+2025-07-15 16:24:16,283 - Received signal 2 (SIGINT), stopping...
+2025-07-15 16:24:16,284 - Scheduler has been shut down
+2025-07-15 16:24:21,111 - Scheduler started
+2025-07-15 16:24:24,090 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 16:24:24 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 16:24:30,701 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:24:30 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:24:31,788 - Пользователь 406497047 нажал кнопку: month_04
+2025-07-15 16:24:31 - Пользователь 406497047 нажал кнопку: month_04
+2025-07-15 16:24:33,066 - Пользователь 406497047 нажал кнопку: date_04_23
+2025-07-15 16:24:33 - Пользователь 406497047 нажал кнопку: date_04_23
+2025-07-15 16:25:16,011 - Received signal 2 (SIGINT), stopping...
+2025-07-15 16:25:16,011 - Scheduler has been shut down
+2025-07-15 16:25:26,006 - Scheduler started
+2025-07-15 16:25:28,624 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 16:25:28 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 16:25:31,395 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:25:31 - Пользователь 406497047 нажал кнопку: choose_month
+2025-07-15 16:25:32,511 - Пользователь 406497047 нажал кнопку: month_02
+2025-07-15 16:25:32 - Пользователь 406497047 нажал кнопку: month_02
+2025-07-15 16:25:33,834 - Пользователь 406497047 нажал кнопку: date_02_23
+2025-07-15 16:25:33 - Пользователь 406497047 нажал кнопку: date_02_23
+2025-07-15 16:25:47,236 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:25:47 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:33:59,645 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 16:33:59 - Пользователь 406497047 нажал кнопку: day_plus
+2025-07-15 16:34:15,103 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:34:15 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:34:25,138 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:34:25 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:34:40,382 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:34:40 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:34:52,416 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:34:52 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:35:02,429 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:35:02 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:35:08,824 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:35:08 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:35:28,796 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:35:28 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 16:36:02,927 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 16:36:02 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 17:42:20,245 - Ошибка при ответе на callback: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 17:42:20,253 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 17:42:20 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 17:42:23,511 - Пользователь 406497047 нажал кнопку: engineer_4
+2025-07-15 17:42:23 - Пользователь 406497047 нажал кнопку: engineer_4
+2025-07-15 17:42:25,650 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-15 17:42:25 - Пользователь 406497047 нажал кнопку: engmonth_07
+2025-07-15 19:22:20,038 - Received signal 2 (SIGINT), stopping...
+2025-07-15 19:22:20,056 - Scheduler has been shut down
+2025-07-15 19:22:25,452 - Scheduler started
+2025-07-15 19:22:28,383 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 19:22:28 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 19:23:10,007 - Received signal 2 (SIGINT), stopping...
+2025-07-15 19:23:10,007 - Scheduler has been shut down
+2025-07-15 19:23:19,826 - Scheduler started
+2025-07-15 19:23:22,195 - Пользователь запустил бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 19:23:22 - Пользователь вошёл в бота: rasta | @Pasta159 | ID: 406497047
+2025-07-15 19:23:25,298 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 19:23:25 - Пользователь 406497047 нажал кнопку: show_all_today
+2025-07-15 19:23:28,773 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 19:23:28 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 19:23:34,911 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 19:23:34 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 19:23:36,144 - Пользователь 406497047 нажал кнопку: engineer_31
+2025-07-15 19:23:36 - Пользователь 406497047 нажал кнопку: engineer_31
+2025-07-15 19:23:38,397 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 19:23:38 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 19:23:39,952 - Пользователь 406497047 нажал кнопку: engineer_15
+2025-07-15 19:23:39 - Пользователь 406497047 нажал кнопку: engineer_15
+2025-07-15 19:23:41,412 - Пользователь 406497047 нажал кнопку: engmonth_06
+2025-07-15 19:23:41 - Пользователь 406497047 нажал кнопку: engmonth_06
+2025-07-15 19:23:45,755 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 19:23:45 - Пользователь 406497047 нажал кнопку: choose_engineer
+2025-07-15 19:23:47,059 - Пользователь 406497047 нажал кнопку: engineer_25
+2025-07-15 19:23:47 - Пользователь 406497047 нажал кнопку: engineer_25
+2025-07-15 19:23:48,514 - Пользователь 406497047 нажал кнопку: engmonth_04
+2025-07-15 19:23:48 - Пользователь 406497047 нажал кнопку: engmonth_04
+2025-07-15 19:51:51,501 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\dispatcher.py", line 557, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\handler.py", line 199, in handle_update
+    return self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python_playground\STSK_shedule_bot\main_stsk_tg_bot.py", line 297, in start
+    update.message.reply_text("Добро пожаловать! Введите пароль:")
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\message.py", line 977, in reply_text
+    return self.bot.send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 534, in send_message
+    return self._message(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\extbot.py", line 203, in _message
+    result = super()._message(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 344, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 19:52:09,106 - Пользователь запустил бота: Алексей | @Vazhuha | ID: 317645895
+2025-07-15 19:52:09 - Пользователь вошёл в бота: Алексей | @Vazhuha | ID: 317645895
+2025-07-15 19:52:45,433 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-15 19:52:45 - Пользователь 776166772 нажал кнопку: choose_engineer
+2025-07-15 19:52:47,627 - Пользователь запустил бота: Pavel | @Shapqa12 | ID: 776166772
+2025-07-15 19:52:47 - Пользователь вошёл в бота: Pavel | @Shapqa12 | ID: 776166772
+2025-07-15 19:52:52,904 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-15 19:52:52 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-15 19:52:54,660 - Пользователь 776166772 нажал кнопку: month_07
+2025-07-15 19:52:54 - Пользователь 776166772 нажал кнопку: month_07
+2025-07-15 19:52:57,510 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-15 19:52:57 - Пользователь 776166772 нажал кнопку: choose_month
+2025-07-15 19:52:58,822 - Пользователь 776166772 нажал кнопку: main_who
+2025-07-15 19:52:58 - Пользователь 776166772 нажал кнопку: main_who
+2025-07-15 19:53:02,522 - Пользователь 776166772 нажал кнопку: day_plus
+2025-07-15 19:53:02 - Пользователь 776166772 нажал кнопку: day_plus
+2025-07-15 19:55:54,089 - Пользователь запустил бота: Семён Плотников | @Bavinor | ID: 1688132862
+2025-07-15 19:55:54 - Пользователь вошёл в бота: Семён Плотников | @Bavinor | ID: 1688132862
+2025-07-15 19:57:10,545 - Пользователь 1688132862 нажал кнопку: day_plus
+2025-07-15 19:57:10 - Пользователь 1688132862 нажал кнопку: day_plus
+2025-07-15 19:57:19,673 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:57:19 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:57:22,685 - Пользователь 1688132862 нажал кнопку: engineer_25
+2025-07-15 19:57:22 - Пользователь 1688132862 нажал кнопку: engineer_25
+2025-07-15 19:57:25,179 - Пользователь 1688132862 нажал кнопку: engmonth_02
+2025-07-15 19:57:25 - Пользователь 1688132862 нажал кнопку: engmonth_02
+2025-07-15 19:58:19,899 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:58:19 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:58:27,873 - Пользователь 1688132862 нажал кнопку: engineer_2
+2025-07-15 19:58:27 - Пользователь 1688132862 нажал кнопку: engineer_2
+2025-07-15 19:58:30,032 - Пользователь 1688132862 нажал кнопку: engmonth_07
+2025-07-15 19:58:30 - Пользователь 1688132862 нажал кнопку: engmonth_07
+2025-07-15 19:58:32,663 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:58:32 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:58:35,141 - Пользователь 1688132862 нажал кнопку: engineer_3
+2025-07-15 19:58:35 - Пользователь 1688132862 нажал кнопку: engineer_3
+2025-07-15 19:58:36,962 - Пользователь 1688132862 нажал кнопку: engmonth_05
+2025-07-15 19:58:36 - Пользователь 1688132862 нажал кнопку: engmonth_05
+2025-07-15 19:58:56,905 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:58:56 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:59:02,723 - Пользователь 1688132862 нажал кнопку: engineer_0
+2025-07-15 19:59:02 - Пользователь 1688132862 нажал кнопку: engineer_0
+2025-07-15 19:59:05,412 - Пользователь 1688132862 нажал кнопку: engmonth_01
+2025-07-15 19:59:05 - Пользователь 1688132862 нажал кнопку: engmonth_01
+2025-07-15 19:59:07,685 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:59:07 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:59:10,343 - Пользователь 1688132862 нажал кнопку: main_who
+2025-07-15 19:59:10 - Пользователь 1688132862 нажал кнопку: main_who
+2025-07-15 19:59:14,636 - Пользователь 1688132862 нажал кнопку: show_all_today
+2025-07-15 19:59:14 - Пользователь 1688132862 нажал кнопку: show_all_today
+2025-07-15 19:59:25,455 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:59:25 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:59:28,427 - Пользователь 1688132862 нажал кнопку: engineer_0
+2025-07-15 19:59:28 - Пользователь 1688132862 нажал кнопку: engineer_0
+2025-07-15 19:59:31,355 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 19:59:31 - Пользователь 1688132862 нажал кнопку: choose_engineer
+2025-07-15 21:06:14,107 - Ошибка при ответе на callback: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 21:06:14,108 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 21:06:14 - Пользователь 406497047 нажал кнопку: main_who
+2025-07-15 22:17:29,377 - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 22:17:29,378 - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\updater.py", line 651, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\updater.py", line 602, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\ext\extbot.py", line 228, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 134, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 3140, in get_updates
+    self._post(
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\bot.py", line 299, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 361, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

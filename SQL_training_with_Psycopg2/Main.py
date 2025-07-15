@@ -4,7 +4,7 @@ from psycopg2 import Error
 try:
     # Подключиться к существующей базе данных
     connection = psycopg2.connect(user="postgres",
-                                  password="Lifius!",
+                                  password="удалено",
                                   host="127.0.0.1",
                                   port="5432",
                                   database="stsk_tg_bot")
