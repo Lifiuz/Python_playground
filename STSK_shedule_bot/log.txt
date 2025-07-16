@@ -1482,3 +1482,5 @@ Traceback (most recent call last):
   File "C:\Users\Lifiu\AppData\Local\Programs\Python\Python311\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
     raise NetworkError(f'urllib3 HTTPError {error}') from error
 telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-07-15 23:39:10,924 - Received signal 2 (SIGINT), stopping...
+2025-07-15 23:39:10,925 - Scheduler has been shut down
